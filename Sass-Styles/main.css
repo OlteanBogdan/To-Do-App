@@ -1,2 +1,117 @@
+/* Breakpoints
+=====================*/
+/* Colors
+=====================*/
+/* To-Do-App
+=====================*/
+/* Fonts
+=====================*/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap);
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #181824;
+}
+
+p,
+a,
+li,
+ul,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.site-container .bg-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 340px;
+  background-image: url("/images/bg-desktop-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.site-container .header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 540px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.site-container .header-wrapper .theme-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-container .header-wrapper .theme-wrapper h1 {
+  font-size: 60px;
+  color: #f2f4f6;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 15px;
+}
+
+.site-container .header-wrapper .theme-wrapper svg {
+  font-size: 30px;
+  fill: white;
+}
+
+.site-container .header-wrapper .input-wrapper {
+  position: relative;
+  margin-top: 36px;
+  width: 100%;
+}
+
+.site-container .header-wrapper .input-wrapper span::before {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "";
+  height: 26px;
+  width: 26px;
+  border: 1px solid #4d5066;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.site-container .header-wrapper .input-wrapper .main-input {
+  max-width: 480px;
+  width: 100%;
+  padding: 18px 0px 18px 60px;
+  background: #25273c;
+  border: none;
+  color: #cacde8;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.site-container .header-wrapper .input-wrapper .main-input::before {
+  content: "2";
+  height: 22px;
+  border: 1px solid red;
+  color: red;
+  background-color: red;
+}
 /*# sourceMappingURL=main.css.map */
