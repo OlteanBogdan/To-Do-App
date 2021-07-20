@@ -82,30 +82,18 @@ h4 {
   margin-bottom: 40px;
 }
 
-.site-container .header-wrapper .input-wrapper span::before {
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  content: "";
-  height: 26px;
-  width: 26px;
-  border: 1px solid #4d5066;
-  border-radius: 50%;
-  background-color: transparent;
-  cursor: pointer;
-}
-
 .site-container .header-wrapper .input-wrapper .main-input {
-  max-width: 480px;
+  max-width: 526px;
   width: 100%;
-  padding: 16px 0px 16px 60px;
+  padding: 16px 0px 16px 14px;
   background: #25273c;
   border: none;
   color: #cacde8;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
+  border-radius: 8px;
+  font-family: "Josefin Sans", sans-serif;
+  padding-top: 22px;
 }
 
 .site-container .app-list {
@@ -129,8 +117,13 @@ h4 {
   right: 20px;
 }
 
+.site-container .app-list:first-of-type {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 .site-container .app-list:last-of-type {
-  border-bottom: none;
+  border-bottom: red 1px solid;
 }
 
 .site-container .app-list::before {
@@ -150,5 +143,58 @@ h4 {
 
 .site-container .app-list .close-tab {
   display: none;
+}
+
+.site-container .action-buttons {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  max-width: 540px;
+  width: 100%;
+  padding: 16px 0px 16px 0px;
+  background: #25273c;
+  border: none;
+  color: #cacde8;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.site-container .action-buttons .common {
+  background: transparent;
+  border: none;
+  color: #4d5066;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.site-container .action-buttons .common:first-of-type {
+  margin-left: 10px;
+  margin-right: 65px;
+}
+
+.site-container .action-buttons .common:nth-child(2) {
+  margin-right: 10px;
+}
+
+.site-container .action-buttons .common:nth-child(3) {
+  margin-right: 10px;
+}
+
+.site-container .action-buttons .common:nth-child(4) {
+  margin-right: 25px;
+}
+
+.site-container .action-buttons .common:hover {
+  color: #cacde8;
+}
+
+.display {
+  display: block !important;
 }
 /*# sourceMappingURL=main.css.map */
