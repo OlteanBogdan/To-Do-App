@@ -1,5 +1,4 @@
 .site-container {
-
     .bg-img {
         position: absolute;
         left: 0;
@@ -40,6 +39,7 @@
             position: relative;
             margin-top: 36px;
             width: 100%;
+            margin-bottom: 40px;
 
             span {
                 &::before {
@@ -56,24 +56,64 @@
                     cursor: pointer;
                 }
             }
+
                 .main-input {
                 max-width: 480px;
                 width: 100%;
-                padding: 18px 0px 18px 60px;
+                padding: 16px 0px 16px 60px;
                 background: $tab-background;
                 border: none;
                 color: $font-color;
-                font-size: 22px;
+                font-size: 20px;
                 font-weight: 400;
-                
-                &::before {
-                    content: "2";
-                    height: 22px;
-                    border: 1px solid red;
-                    color: red;
-                    background-color: red;
-                }
+
             }
+        }
+    }
+
+    .app-list {
+        position: relative;
+        margin: 0 auto;
+        max-width: 480px;
+        width: 100%;
+        padding: 16px 0px 16px 60px;
+        background: $tab-background;
+        border: none;
+        color: $font-color;
+        font-size: 20px;
+        font-weight: 400;
+        border-bottom: 1px solid hsl(233, 10%, 25%);
+        font-family: $primary-font;
+        
+        &:hover {
+            .close-tab {
+            display: block;
+            position: absolute;
+            right: 20px;
+
+            }
+        }
+        
+        &:last-of-type{
+            border-bottom: none;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 18px;
+            transform: translateY(-50%);
+            content: "";
+            height: 26px;
+            width: 26px;
+            border: 1px solid hsl(233, 14%, 35%);
+            border-radius: 50%;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .close-tab {
+            display: none;
         }
     }
 }

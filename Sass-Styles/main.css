@@ -79,6 +79,7 @@ h4 {
   position: relative;
   margin-top: 36px;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .site-container .header-wrapper .input-wrapper span::before {
@@ -99,19 +100,55 @@ h4 {
 .site-container .header-wrapper .input-wrapper .main-input {
   max-width: 480px;
   width: 100%;
-  padding: 18px 0px 18px 60px;
+  padding: 16px 0px 16px 60px;
   background: #25273c;
   border: none;
   color: #cacde8;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
 }
 
-.site-container .header-wrapper .input-wrapper .main-input::before {
-  content: "2";
-  height: 22px;
-  border: 1px solid red;
-  color: red;
-  background-color: red;
+.site-container .app-list {
+  position: relative;
+  margin: 0 auto;
+  max-width: 480px;
+  width: 100%;
+  padding: 16px 0px 16px 60px;
+  background: #25273c;
+  border: none;
+  color: #cacde8;
+  font-size: 20px;
+  font-weight: 400;
+  border-bottom: 1px solid #393b46;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.site-container .app-list:hover .close-tab {
+  display: block;
+  position: absolute;
+  right: 20px;
+}
+
+.site-container .app-list:last-of-type {
+  border-bottom: none;
+}
+
+.site-container .app-list::before {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "";
+  height: 26px;
+  width: 26px;
+  border: 1px solid #4d5066;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.site-container .app-list .close-tab {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
