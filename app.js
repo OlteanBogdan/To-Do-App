@@ -1,6 +1,8 @@
 $(document).ready(function () {
     var $input = $('.main-input');
     var $action = $('.action-buttons');
+    var $tabNumber = $('.number');
+    var parseNumber = parseInt($tabNumber.text())
 
     $input.on('keydown', function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -12,6 +14,10 @@ $(document).ready(function () {
             $('.app-list').prepend(`<button class="close-tab">X</button>`);
             $action.addClass('display')
             $input.val("");
+
+            parseNumber++
+            $tabNumber.text(parseNumber)
+
         }
     })
 
@@ -24,7 +30,14 @@ $(document).ready(function () {
     })
 
     $('.app-list-wrapper').on('click', '.close-tab', function () {
-        console.log('mor')
         $(this).parent().remove();
+        parseNumber--
+        $tabNumber.text(parseNumber)
+
+        if ($('.app-list').length < 1) {
+            $action.removeClass('display')
+        }
+
+
     })
 });
