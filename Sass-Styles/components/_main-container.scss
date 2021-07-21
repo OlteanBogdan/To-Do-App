@@ -76,6 +76,7 @@
             display: block;
             position: absolute;
             right: 20px;
+            
 
             }
         }
@@ -83,10 +84,6 @@
         &:first-of-type {
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
-        }
-
-        &:last-of-type{
-            border-bottom: red 1px solid;
         }
 
         &::before {
@@ -100,7 +97,11 @@
             border: 1px solid hsl(233, 14%, 35%);
             border-radius: 50%;
             background-color: transparent;
-            cursor: pointer;
+            cursor: pointer; 
+
+            &:hover {
+                border: 1px solid red;
+            }
         }
 
         .close-tab {
@@ -153,6 +154,21 @@
             &:hover {
                 color: $font-color;
             }
+        }
+    }
+
+    .close-tab {
+        font-size: 24px;
+        color: $checked-bg;
+        font-weight: 600;
+        font-family: $primary-font;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s all ease-in-out;
+
+        &:hover {
+            color: $font-color;
         }
     }
 }
