@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .site-container {
     .bg-img {
         position: absolute;
@@ -21,17 +25,26 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            margin: 0 20px;
              
             h1{
                 font-size: 60px;
                 color: $pale-grey;
                 font-family: $primary-font;
                 letter-spacing: 15px;
+                
+                @media only screen and (max-width: 600px) {
+                    margin-left: 10px;
+                }
             }
 
             svg {
                 font-size: 30px;
                 fill: white;
+
+                @media only screen and (max-width: 600px) {
+                    margin-right: 10px;
+                }
             }
         }
 
@@ -42,7 +55,6 @@
             margin-bottom: 40px;
 
                 .main-input {
-                max-width: 526px;
                 width: 100%;
                 padding: 16px 0px 16px 14px;
                 background: $tab-background;
@@ -53,69 +65,72 @@
                 border-radius: 8px;
                 font-family: $primary-font;
                 padding-top: 22px;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             }
         }
     }
 
-    .app-list {
-        position: relative;
+    .app-list-wrapper {
+        max-width: 540px;
         margin: 0 auto;
-        max-width: 480px;
-        width: 100%;
-        padding: 16px 0px 16px 60px;
-        background: $tab-background;
-        border: none;
-        color: $font-color;
-        font-size: 20px;
-        font-weight: 400;
-        border-bottom: 1px solid hsl(233, 10%, 25%);
-        font-family: $primary-font;
-        
-        &:hover {
-            .close-tab {
-            display: block;
-            position: absolute;
-            right: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        .app-list {
+            position: relative;
+            margin: 0 auto;
+            padding: 16px 0px 16px 60px;
+            background: $tab-background;
+            border: none;
+            color: $font-color;
+            font-size: 20px;
+            font-weight: 400;
+            border-bottom: 1px solid hsl(233, 10%, 25%);
+            font-family: $primary-font;
             
-
-            }
-        }
-
-        &:first-of-type {
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-        }
-
-        &::before {
-            position: absolute;
-            top: 50%;
-            left: 18px;
-            transform: translateY(-50%);
-            content: "";
-            height: 26px;
-            width: 26px;
-            border: 1px solid hsl(233, 14%, 35%);
-            border-radius: 50%;
-            background-color: transparent;
-            cursor: pointer; 
-
             &:hover {
-                border: 1px solid red;
+                .close-tab {
+                display: block;
+                position: absolute;
+                right: 20px;
+                }
             }
-        }
-
-        .close-tab {
-            display: none;
+    
+            &:first-of-type {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+    
+            .close-tab {
+                display: none;
+            }
+    
+            
+            .circle-selector {
+                z-index: 1;
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                border: 3px solid  hsl(233, 14%, 35%);
+                border-radius: 50px;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: 0.2s all ease-in-out;
+    
+                &:hover {
+                    border: 3px solid  hsl(233, 11%, 84%);
+                }
+            }
         }
     }
+
 
     .action-buttons {
         display: none;
         position: relative;
         margin: 0 auto;
-        max-width: 540px;
         width: 100%;
-        padding: 16px 0px 16px 0px;
+        padding: 16px;
         background: $tab-background;
         border: none;
         color: $font-color;
@@ -124,6 +139,7 @@
         font-family: $primary-font;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
+        justify-content: space-between;
 
         .common {
             background: transparent;
@@ -134,25 +150,21 @@
             cursor: pointer;
             transition: 0.2s all ease-in-out;
 
-            &:first-of-type {
-                margin-left: 10px;
-                margin-right: 65px;
-            }
-
-            &:nth-child(2) {
-                margin-right: 10px;
-            }
-
-            &:nth-child(3) {
-                margin-right: 10px;
-            }
-
-            &:nth-child(4) {
-                margin-right: 25px;
-            }
-
             &:hover {
                 color: $font-color;
+            }
+        }
+
+        span {
+            margin-right: 8px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+
+            .center-separator {
+                padding: 10px 0;
             }
         }
     }
@@ -174,5 +186,26 @@
 }
 
 .display {
-    display: block !important;
+    display: flex !important;
+}
+
+.active-checked {
+    background: linear-gradient(139deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+    
+    & + span {
+        position: relative;
+        color: rgba( $font-color,  0.3);
+
+        &::after {
+            content: "";
+            background-color: rgba( $font-color,  0.3);
+            width: 100%;
+            position: absolute;
+            height: 3px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            
+        }
+    }
 }
