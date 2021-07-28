@@ -85,4 +85,26 @@ $(document).ready(function () {
         $('.app-list:not(.checked)').show()
         $('.app-list.checked').show()
     })
+
+    $('.theme').on('click', function () {
+        if ($(this).hasClass('light')) {
+            $('.dark').show()
+            $('.light').hide()
+        }
+
+        if ($(this).hasClass('dark')) {
+            $('.light').show()
+            $('.dark').hide()
+        }
+
+
+    })
+
+    $('.light').on('click', function () {
+        $('link[href="Sass-Styles/main.css"]').attr('href', 'Sass-Styles/main-dark.css')
+    })
+
+    $('.dark').on('click', function () {
+        $('link[href="Sass-Styles/main-dark.css"]').attr('href', 'Sass-Styles/main.css')
+    })
 });
