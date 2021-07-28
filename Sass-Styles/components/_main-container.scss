@@ -7,6 +7,7 @@
         position: absolute;
         left: 0;
         right: 0;
+        top: 0;
         height: 340px;
         background-image: url("/images/bg-desktop-dark.jpg");
         background-repeat: no-repeat;    
@@ -41,10 +42,15 @@
             svg {
                 font-size: 30px;
                 fill: white;
+                cursor: pointer;
 
                 @media only screen and (max-width: 600px) {
-                    margin-right: 10px;
+                    margin-right: theme-wrapper10px;
                 }
+            }
+
+            .dark {
+                display: none;
             }
         }
 
@@ -208,4 +214,6 @@
             
         }
     }
+
+    
 }

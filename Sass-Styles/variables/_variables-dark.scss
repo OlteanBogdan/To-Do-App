@@ -2,6 +2,11 @@ body {
     transition: 1s;
 }
 
+$main-background: hsl(0, 0%, 98%);
+$tab-background: #ffffff;
+$font-color: #000000;
+$checked-bg: hsl(233, 14%, 35%);
+
 /* Breakpoints
 =====================*/
 $bp-huge: 2000px;
@@ -31,12 +36,13 @@ $steel: #788795;
 $brand-primary: #1D96C7;
 $black: #0a1724;
 
+body {
+    transition: 1s;
+}
+
 // /* To-Do-App
 // =====================*/
-$main-background: #181824;
-$tab-background: #25273c;
-$font-color: hsl(234, 39%, 85%);
-$checked-bg: hsl(233, 14%, 35%);
+
 
 // /* Fonts
 // =====================*/
@@ -49,4 +55,3 @@ $primary-font: 'Josefin Sans', sans-serif;
 /* Fonts
 =====================*/
 $primary-font: 'Josefin Sans', sans-serif;
-

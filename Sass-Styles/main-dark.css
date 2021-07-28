@@ -8,6 +8,11 @@ body {
 =====================*/
 /* Colors
 =====================*/
+body {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 /* To-Do-App
 =====================*/
 /* Fonts
@@ -17,7 +22,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #181824;
+  background-color: #fafafa;
 }
 
 p,
@@ -114,9 +119,9 @@ h4 {
 .site-container .header-wrapper .input-wrapper .main-input {
   width: 100%;
   padding: 16px 0px 16px 14px;
-  background: #25273c;
+  background: #ffffff;
   border: none;
-  color: #cacde8;
+  color: #000000;
   font-size: 18px;
   font-weight: 400;
   border-radius: 8px;
@@ -137,9 +142,9 @@ h4 {
   position: relative;
   margin: 0 auto;
   padding: 16px 0px 16px 60px;
-  background: #25273c;
+  background: #ffffff;
   border: none;
-  color: #cacde8;
+  color: #000000;
   font-size: 20px;
   font-weight: 400;
   border-bottom: 1px solid #393b46;
@@ -186,9 +191,9 @@ h4 {
   margin: 0 auto;
   width: 100%;
   padding: 16px;
-  background: #25273c;
+  background: #ffffff;
   border: none;
-  color: #cacde8;
+  color: #000000;
   font-size: 20px;
   font-weight: 400;
   font-family: "Josefin Sans", sans-serif;
@@ -211,7 +216,7 @@ h4 {
 }
 
 .site-container .action-buttons .common:hover {
-  color: #cacde8;
+  color: #000000;
 }
 
 .site-container .action-buttons span {
@@ -246,7 +251,7 @@ h4 {
 }
 
 .site-container .close-tab:hover {
-  color: #cacde8;
+  color: #000000;
 }
 
 .display {
@@ -261,12 +266,12 @@ h4 {
 
 .active-checked + span {
   position: relative;
-  color: rgba(202, 205, 232, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .active-checked + span::after {
   content: "";
-  background-color: rgba(202, 205, 232, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   position: absolute;
   height: 3px;
@@ -275,4 +280,4 @@ h4 {
           transform: translateY(-50%);
   left: 0;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main-dark.css.map */
